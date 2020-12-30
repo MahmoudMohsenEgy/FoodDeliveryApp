@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.homeActivity.MainActivity"
+    android:background="#616161">
+
+    <fragment
+        android:id="@+id/fragmentFrame"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/myNavigationBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation_file"
+        tools:ignore="FragmentTagUsage">
+
+    </fragment>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentFrame"
+        android:id="@+id/myNavigationBar"
+        app:menu="@menu/navigatio_menu_bar"
+        app:itemTextColor="@drawable/nav_item_selected"
+        app:itemIconTint="@drawable/nav_item_selected"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

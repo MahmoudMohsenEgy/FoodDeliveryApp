@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.homeFragment.HomeFragment"
+    android:background="#156"
+    android:id="@+id/homeFragment"
+    android:backgroundTint="#ffffff">
+
+    <TextView
+        android:id="@+id/order_TextView"
+        android:layout_width="87dp"
+        android:layout_height="40dp"
+        android:text="Order"
+        android:textColor="#787373"
+        android:fontFamily="@font/semibold"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <View
+        android:id="@+id/separatorLine"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:alpha="0.8"
+        android:background="@android:color/darker_gray"
+        android:outlineAmbientShadowColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderRecyclerView"
+        android:visibility="invisible"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:id="@+id/noOrderdsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/semibold"
+        android:text="No orders are added yet !"
+        android:textColor="#EC8894"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/orderRelativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_TextView"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <ImageView
+        android:id="@+id/arrowToSearch"
+        android:layout_width="297dp"
+        android:layout_height="265dp"
+        android:layout_marginBottom="44dp"
+        android:rotation="-30"
+        android:scaleX="-1"
+        android:src="@drawable/ic_right_drawn_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderRecyclerView"
+        android:layout_width="410dp"
+        android:layout_height="376dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_TextView"
+        tools:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/orderRelativeLayout"
+        android:layout_width="309dp"
+        android:layout_height="144dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        >
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="328dp"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center_vertical"
+            android:src="@drawable/cart_background" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirmOrderButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+
+            android:layout_width="142dp"
+            android:layout_height="57dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_gravity="start"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="82dp"
+            android:layout_marginBottom="18dp"
+            android:text="Confirm"
+
+
+            android:textAllCaps="false"
+
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold|italic"
+            app:cornerRadius="5dp"
+            app:strokeColor="#918C8C"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/orderTotal"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="31dp"
+            android:gravity="center"
+            android:text="280.28LE"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/searchYourFood"
+        android:layout_width="248dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/regular"
+        android:text="Go search for your"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noOrderdsText"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <TextView
+        android:id="@+id/favoriteFoodTextView"
+        android:layout_width="146dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="102dp"
+        android:text="favorite food"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/searchYourFood"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/searchYourFood"
+        app:layout_constraintTop_toBottomOf="@+id/searchYourFood"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

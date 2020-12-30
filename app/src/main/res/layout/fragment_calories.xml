@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.homeFragment.HomeFragment"
+    android:background="@android:color/white"
+    android:id="@+id/homeFragment"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="417dp"
+        android:layout_height="209dp"
+
+        android:layout_marginBottom="476dp"
+        android:src="@drawable/nutrition_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="142dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Nutrition"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:src="@drawable/ic_calories_calculator"
+        app:layout_constraintBottom_toTopOf="@+id/quote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="204dp"
+        android:layout_height="36dp"
+
+        android:layout_marginTop="344dp"
+        android:drawableTintMode="add"
+        android:hint="Weight in kg"
+        android:textColor="#000000"
+        android:textColorHint="#777373"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.613"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="204dp"
+        android:layout_height="36dp"
+        android:textColorHint="#777373"
+        android:layout_marginTop="28dp"
+        android:paddingTop="5dp"
+        android:hint="Height in cm"
+        android:textColor="#000000"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+    <ImageView
+        android:id="@+id/image_age"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_age"
+        app:layout_constraintBottom_toBottomOf="@+id/years"
+        app:layout_constraintEnd_toStartOf="@+id/years"
+        app:layout_constraintTop_toTopOf="@+id/years"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/image_female"
+        android:layout_width="51dp"
+        android:layout_height="73dp"
+        android:src="@drawable/ic_woman"
+        app:layout_constraintBottom_toBottomOf="@+id/image_male"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toEndOf="@+id/switchGender"
+        app:layout_constraintTop_toTopOf="@+id/image_male"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Switch
+        android:id="@+id/switchGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
+        app:layout_constraintEnd_toStartOf="@+id/image_female"
+        app:layout_constraintStart_toEndOf="@+id/image_male"
+        app:layout_constraintTop_toBottomOf="@+id/quote"
+        app:layout_constraintVertical_bias="0.811" />
+
+    <EditText
+        android:id="@+id/years"
+        android:layout_width="205dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:hint="age in years"
+        android:textColorHint="#777373"
+        android:textColor="#000000"
+        android:paddingTop="5dp"
+
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/image_male"
+        android:layout_width="52dp"
+        android:layout_height="74dp"
+        android:src="@drawable/ic_man"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
+        app:layout_constraintEnd_toStartOf="@+id/switchGender"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/image_weight"
+        android:layout_width="32dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_weight"
+        app:layout_constraintBottom_toBottomOf="@+id/weight"
+        app:layout_constraintEnd_toStartOf="@+id/weight"
+        app:layout_constraintTop_toTopOf="@+id/weight"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/image_height"
+        android:layout_width="28dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_height__1_"
+        app:layout_constraintBottom_toBottomOf="@+id/height"
+        app:layout_constraintEnd_toStartOf="@+id/height"
+        app:layout_constraintTop_toTopOf="@+id/height"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitCalories"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+        android:layout_width="132dp"
+        android:layout_height="45dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="8dp"
+        android:text="SUBMIT"
+        android:textColor="#F67070"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/years"
+        app:layout_constraintVertical_bias="0.071"
+        app:strokeColor="#918C8C"
+        app:strokeWidth="1dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupQuestions"
+        android:layout_width="6dp"
+        android:layout_height="12dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="image_height,image_weight,image_weight,image_male,image_female,image_age,weight,height,years,switchGender,submitCalories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <TextView
+        android:id="@+id/caloriesNumberText"
+        android:layout_width="375dp"
+        android:layout_height="111dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/semibold"
+        android:gravity="center"
+        android:text="You have today 2000 Calories!"
+        android:textColor="#AF4848"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.416" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
